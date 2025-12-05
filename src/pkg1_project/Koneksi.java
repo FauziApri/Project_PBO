@@ -7,7 +7,8 @@ public class Koneksi {
     public static Connection getConnection() {
         if (conn == null) {
             try {
-                String url = "jdbc:mysql://localhost:3306/db_fauzi"; //
+                String url = "jdbc:mysql://localhost:3306/db_fauzi";
+                //GUNAKAN DATABASE KALIAN UNTUK TESTING(YANG ADA DI MYSQL KALIAN), misal db_agus,db_yudi
                 String user = "root";
                 String pass = ""; // isi jika ada password
                 
