@@ -1,9 +1,10 @@
 package pkg1_project;
 
+
 public class Main {
     public static void main(String[] args) {
         //MySQL TEST COONNECT
-        // Koneksi.getConnection();
+        Koneksi.getConnection();
         
         //RUN TESTING (OPTIONAL)
         Customer cs = new Customer("Ozi","Bgr","0821","1111");
