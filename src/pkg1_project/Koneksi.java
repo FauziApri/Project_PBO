@@ -11,9 +11,14 @@ public class Koneksi {
 
                 Dotenv dotenv = Dotenv.load();
 
+                String name = dotenv.get("DB_NAME");
                 String user = dotenv.get("DB_USER");
                 String pass = dotenv.get("DB_PASS");
-                String name = dotenv.get("DB_NAME");
+                
+                //CHECK DATA 
+//                System.out.println(name);
+//                System.out.println(user);
+//                System.out.println(pass);
 
                 String url = "jdbc:mysql://localhost:3306/" + name;
                 //GUNAKAN DATABASE KALIAN UNTUK TESTING(YANG ADA DI MYSQL KALIAN), misal db_agus,db_yudi

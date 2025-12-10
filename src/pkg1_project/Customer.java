@@ -1,4 +1,3 @@
-
 package pkg1_project;
 
 public class Customer {
