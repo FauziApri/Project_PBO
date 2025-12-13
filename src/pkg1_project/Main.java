@@ -2,9 +2,15 @@ package pkg1_project;
 
 public class Main {
     public static void main(String[] args) {
-        
         //MySQL TEST COONNECT
-        Koneksi.getConnection();
+//        Koneksi.getConnection();
+        
+        
+        Sewa sw = new Sewa();
+        sw.showMotor();
+        sw.pilihMotor(3);
+        
+        
         
         
         //RUN TESTING (OPTIONAL)

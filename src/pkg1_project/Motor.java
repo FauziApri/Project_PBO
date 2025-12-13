@@ -1,16 +1,18 @@
 package pkg1_project;
 
 public class Motor extends Kendaraan {
-    private boolean perlengkapan;
+    private String perlengkapan;
     
-    public Motor(int CsID, String CsMerk, String CsTipe, String CsWarna, 
-    String CsPlatNo, String CsTransmisi, int hrgSewa) {
-        super(CsID, CsMerk, CsTipe, CsWarna, CsPlatNo, CsTransmisi, hrgSewa);
+    public Motor(int CsID, String CsMerk, String CsTipe, int CsTahun, int hrgSewa, 
+                 String CsWarna, String CsPlatNo, String CsTransmisi, String CsPerlengkapan) {
+        super(CsID, CsMerk, CsTipe, CsTahun, hrgSewa, CsWarna, CsPlatNo, CsTransmisi);
+        this.perlengkapan = CsPerlengkapan;
     }
 
     @Override public void infoKendaraan() {
         System.out.println("---- INFORMASI Motor ----");
         super.infoKendaraan();
         System.out.println("Perlengkapan : " + perlengkapan);
+        System.out.println("");
     }    
 }
