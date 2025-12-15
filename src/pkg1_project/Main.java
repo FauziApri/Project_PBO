@@ -1,17 +1,22 @@
 package pkg1_project;
 
+import pkg1_project.models.Sewa;
+
 public class Main {
     public static void main(String[] args) {
         //MySQL TEST COONNECT
 //        Koneksi.getConnection();
+
+        AppContext ctx = new AppContext();
+        MenuRouter router = new MenuRouter();
+
+        router.start(ctx);
         
-        
-        Sewa sw = new Sewa();
-        sw.showMotor();
-        sw.pilihMotor(3);
-        
-        
-        
+        // 
+        // Sewa sw = new Sewa();
+        // sw.showMotor();
+        // sw.pilihMotor(3);
+               
         
         //RUN TESTING (OPTIONAL)
 //        Customer cs = new Customer("Ozi","Bgr","0821","1111");

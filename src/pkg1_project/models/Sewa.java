@@ -1,4 +1,4 @@
-package pkg1_project;
+package pkg1_project.models;
 import java.util.ArrayList;
 
 public class Sewa {

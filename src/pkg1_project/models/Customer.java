@@ -1,4 +1,4 @@
-package pkg1_project;
+package pkg1_project.models;
 
 public class Customer {
     private String nama, alamat, noHP, NIK;

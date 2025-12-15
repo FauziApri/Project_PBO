@@ -1,4 +1,4 @@
-package pkg1_project;
+package pkg1_project.models;
 
 public class Motor extends Kendaraan {
     private String perlengkapan;

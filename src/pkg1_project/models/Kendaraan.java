@@ -1,4 +1,4 @@
-package pkg1_project;
+package pkg1_project.models;
 
 public class Kendaraan {
     protected String warna, merk, platNo, transmisi, tipe;
