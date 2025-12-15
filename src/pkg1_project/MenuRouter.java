@@ -18,6 +18,7 @@ public class MenuRouter {
         Menu validasiDataMenu = new ValidasiDataMenu();
         Menu mobilMenu = new MobilMenu();
         Menu motorMenu = new MotorMenu();
+        Menu validasiSewaMenu = new ValidasiSewaMenu();
 
         String start = mainMenu.show(ctx);
 
@@ -38,5 +39,6 @@ public class MenuRouter {
         } else if (pilihan.equalsIgnoreCase("2")) { 
             motorMenu.show(ctx);
         }
+        validasiSewaMenu.show(ctx);
     }
 }
