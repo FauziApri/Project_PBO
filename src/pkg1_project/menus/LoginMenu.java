@@ -6,6 +6,9 @@ public class LoginMenu implements Menu {
 
     public String show(AppContext ctx) {
         System.out.println("Ini menu login");
-        return "";
+        
+        System.out.println("Input NIK:");
+        String res = ctx.scanner.nextLine();
+        return res;
     }
 }
