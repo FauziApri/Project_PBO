@@ -1,5 +1,10 @@
 package pkg1_project.models;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
 public class Customer {
     private String nama, alamat, noHP, NIK;
     
@@ -24,4 +29,27 @@ public class Customer {
         System.out.println("No.HP : " + noHP);
         System.out.println("NIK : " + NIK);
     }
+
+    // Public static test
+    public static Customer getCustomerByNIK(Connection db, String nik) {
+        String sql = "SELECT * FROM customer WHERE nik=?";
+        Customer costumer = new Customer("test", "alamat", "08153153", "123243");
+        
+        try(
+            PreparedStatement ps = db.prepareStatement(sql);
+        ) {
+            ps.setString(1, nik);
+            ResultSet rs = ps.executeQuery();
+            
+            if (rs.next()) {
+                costumer = new Customer(rs.getString("nama"), rs.getString("alamat"), rs.getString("no_hp"), rs.getString("nik"));
+            }
+             
+        }catch(SQLException e) {
+            System.err.println(e);
+        }
+
+        return costumer;
+    }
+
 }
