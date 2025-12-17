@@ -7,6 +7,7 @@ import java.sql.SQLException;
 
 import pkg1_project.models.Customer;
 import pkg1_project.models.Mobil;
+import pkg1_project.models.Motor;
 
 public class CustomerService {
     private Connection db;

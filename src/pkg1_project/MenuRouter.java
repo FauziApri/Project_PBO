@@ -9,6 +9,7 @@ import pkg1_project.menus.*;
 import pkg1_project.models.*;
 import pkg1_project.service.CustomerService;
 import pkg1_project.service.MobilService;
+import pkg1_project.service.MotorService;
 
 public class MenuRouter {
 
@@ -16,6 +17,7 @@ public class MenuRouter {
         //Services
         CustomerService customerService = new CustomerService(ctx.dbConn);
         MobilService mobilService = new MobilService(ctx.dbConn);
+        MotorService motorService = new MotorService(ctx.dbConn);
         
         // Menus
         Menu mainMenu = new MainMenu();
@@ -23,7 +25,7 @@ public class MenuRouter {
         Menu registerMenu = new RegisterMenu();
         Menu validasiDataMenu = new ValidasiDataMenu();
         Menu mobilMenu = new MobilMenu(mobilService);
-        Menu motorMenu = new MotorMenu();
+        Menu motorMenu = new MotorMenu(motorService);
         Menu validasiSewaMenu = new ValidasiSewaMenu();
 
         String start = mainMenu.show(ctx);
