@@ -4,12 +4,14 @@ import java.sql.Connection;
 import java.util.Scanner;
 
 import pkg1_project.models.Customer;
+import pkg1_project.models.Kendaraan;
 
 public class AppContext {
     
     public Scanner scanner = new Scanner(System.in);
     public Connection dbConn;
     public Customer activeCustomer;
+    public Kendaraan activeKendaraan;
 
     public AppContext() {
         Connection con = Koneksi.getConnection();

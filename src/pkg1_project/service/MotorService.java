@@ -1,6 +1,5 @@
 package pkg1_project.service;
 
-import java.awt.List;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

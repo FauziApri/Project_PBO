@@ -6,7 +6,6 @@ package pkg1_project;
 //import pkg1_project.menus.RegisterMenu;
 import pkg1_project.menus.*;
 
-import pkg1_project.models.*;
 import pkg1_project.service.CustomerService;
 import pkg1_project.service.MobilService;
 import pkg1_project.service.MotorService;
@@ -22,7 +21,7 @@ public class MenuRouter {
         // Menus
         Menu mainMenu = new MainMenu();
         Menu loginMenu = new LoginMenu(customerService);
-        Menu registerMenu = new RegisterMenu();
+        Menu registerMenu = new RegisterMenu(customerService);
         Menu validasiDataMenu = new ValidasiDataMenu();
         Menu mobilMenu = new MobilMenu(mobilService);
         Menu motorMenu = new MotorMenu(motorService);

@@ -6,8 +6,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import pkg1_project.models.Customer;
-import pkg1_project.models.Mobil;
-import pkg1_project.models.Motor;
 
 public class CustomerService {
     private Connection db;
@@ -25,7 +23,7 @@ public class CustomerService {
         ) {
             ps.setString(1, nik);
             ResultSet rs = ps.executeQuery();
-            
+
             if (rs.next()) {
                 costumer = new Customer(rs.getString("nama"), rs.getString("alamat"), rs.getString("no_hp"), rs.getString("nik"));
             }
@@ -35,6 +33,26 @@ public class CustomerService {
         }
 
         return costumer;
+    }
+
+    public Customer createCostumer(Customer costumer) {
+        String sql = "INSERT INTO customer (nama, alamat, no_hp, nik) VALUES (?, ?, ?, ?)";
+
+        try(
+            PreparedStatement ps = this.db.prepareStatement(sql);
+        ) {
+            ps.setString(1, costumer.getNama());
+            ps.setString(2, costumer.getAlamat());
+            ps.setString(3, costumer.getNoHP());
+            ps.setString(4, costumer.getNIK());
+            ps.executeUpdate();
+
+        }catch(SQLException e) {
+            System.err.println(e);
+        }
+
+        return this.getCustomerByNIK(costumer.getNIK());
+
     }
 
 }

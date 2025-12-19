@@ -3,7 +3,9 @@ import pkg1_project.AppContext;
 
 public class ValidasiSewaMenu implements Menu {
      public String show(AppContext ctx){
-         System.out.println("ini di validasikan dulu le");
-         return "";
+        
+        ctx.activeKendaraan.infoKendaraan();
+
+        return "";
      }
 }
