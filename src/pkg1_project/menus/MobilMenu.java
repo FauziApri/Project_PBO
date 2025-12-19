@@ -15,7 +15,7 @@ public class MobilMenu implements Menu {
 
     public String show(AppContext ctx) {
         System.out.println("==============");
-        System.out.println("Menu Mobil");
+        System.out.println("[Menu Mobil]");
         
         ArrayList<Mobil> listMobil = this.mobilService.getAllMobil();
 
@@ -24,10 +24,10 @@ public class MobilMenu implements Menu {
         }
 
 
-         // ======================
+        // ======================
         // INPUT ID MOBIL
         // ======================
-        System.out.println("\nMasukkan ID Mobil: ");
+        System.out.println("\nPilih ID Mobil: ");
         int idCari = ctx.scanner.nextInt();
 
         // ======================
@@ -50,7 +50,7 @@ public class MobilMenu implements Menu {
             ctx.activeKendaraan = mobilTerpilih;
             System.out.println("\nMobil ditemukan:");
         } else {
-            System.out.println("\n Mobil dengan ID " + idCari + " tidak ditemukan");
+            System.out.println("\nMobil dengan ID " + idCari + " tidak ditemukan");
         }
 
     

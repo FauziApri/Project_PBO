@@ -18,8 +18,32 @@ public class MotorMenu implements Menu {
         System.out.println("Menu Motor");
         
         ArrayList<Motor> listMotor = this.motorService.getAllMotor();
+        
         for (Motor m : listMotor) {
             m.infoKendaraan();
+        }
+        
+        // INPUT ID
+        System.out.println("\nPilih ID Motor: ");
+        int idCari = ctx.scanner.nextInt();
+        
+        // CARI ID
+        Motor motorTerpilih = null;
+        
+        for (Motor m : listMotor) {
+            if(m.getID() == idCari) {
+                motorTerpilih = m;
+                break;
+            }
+        }
+        
+        // HASIL
+        if (motorTerpilih != null) {
+            ctx.activeKendaraan = motorTerpilih;
+            System.out.println("\nMotor ditemukan:");
+        } else {
+            System.out.println("\nMotor dengan ID " + idCari + " tidak ditemukan");
+            System.out.println("Mohon input dengan benar ");
         }
         
         return "";
