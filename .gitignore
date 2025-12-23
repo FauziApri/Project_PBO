@@ -6,3 +6,4 @@ dist/
 *.log
 nbproject/private/
 .settings/
+run.bat

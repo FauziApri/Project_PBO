@@ -16,7 +16,6 @@ public class ValidasiSewaMenu implements Menu {
         System.out.println("=========================================");
         System.out.println("\t\tTERIMA KASIH");
         System.out.println("=========================================");
-         
         
         return "";
      }
