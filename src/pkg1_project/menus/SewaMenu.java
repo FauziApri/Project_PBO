@@ -7,9 +7,9 @@ public class SewaMenu implements Menu {
     public String show(AppContext ctx) {
         System.out.println("SEWA MENU");
         System.out.println("Pilih menu selanjutnya: ");
-        System.out.println("-> Login");
-        System.out.println("-> Register");
-        System.out.println("ketik disini = ");
+        System.out.println("1. Login");
+        System.out.println("2. Register");
+        System.out.println("pilih disini (1 atau 2)= ");
 
         String res = ctx.scanner.nextLine();
         return res;
