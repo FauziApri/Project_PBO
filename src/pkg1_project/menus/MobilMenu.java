@@ -14,8 +14,8 @@ public class MobilMenu implements Menu {
     }
 
     public String show(AppContext ctx) {
-        System.out.println("==============");
-        System.out.println("[Menu Mobil]");
+        System.out.println("===================");
+        System.out.println("-> [Menu Mobil]");
         
         ArrayList<Mobil> listMobil = this.mobilService.getAllMobil();
 

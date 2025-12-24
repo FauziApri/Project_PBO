@@ -27,12 +27,12 @@ public class Koneksi {
                Class.forName("com.mysql.cj.jdbc.Driver");
 
                 conn = DriverManager.getConnection(url, user, pass);
-                System.out.println("Koneksi Berhasil!");
+                System.out.println("\n-> Koneksi mysql Berhasil !");
             } catch (SQLException e) {
-                System.out.println("Koneksi Gagal: " + e.getMessage());
+                System.out.println("\nKoneksi mysql Gagal : " + e.getMessage());
             }
             catch (ClassNotFoundException e) {
-                System.out.println("Driver MySQL tidak ditemukan!");
+                System.out.println("\nDriver MySQL tidak ditemukan!");
             }
         }
         return conn;

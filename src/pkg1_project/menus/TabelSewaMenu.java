@@ -17,8 +17,8 @@ public class TabelSewaMenu implements Menu {
 
     public String show(AppContext ctx) {
 
-        ArrayList<Sewa> swas = sewaService.getAllSewa();
-        for (Sewa sewa : swas) {
+        ArrayList<Sewa> sewas = sewaService.getAllSewa();
+        for (Sewa sewa : sewas) {
            sewa.showSewa(); 
         }
 

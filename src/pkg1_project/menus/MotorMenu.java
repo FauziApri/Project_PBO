@@ -14,8 +14,8 @@ public class MotorMenu implements Menu {
     }
     
     public String show(AppContext ctx) {
-        System.out.println("==============");
-        System.out.println("Menu Motor");
+        System.out.println("===================");
+        System.out.println("-> [Menu Motor]");
         
         ArrayList<Motor> listMotor = this.motorService.getAllMotor();
         

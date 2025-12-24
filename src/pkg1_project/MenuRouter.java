@@ -34,6 +34,7 @@ public class MenuRouter {
 
         opsi = mainMenu.show(ctx);
         if(opsi.equalsIgnoreCase("1")) {
+            System.out.println("\n-> DATA CUSTOMER YANG SEDANG MENYEWA\n");
             tabelSewaMenu.show(ctx);
             return;
         }
