@@ -1,7 +1,0 @@
-SETTING DI NETBEANS KALIAN :
-1.)Pada project java PROJECT_PBO, cek disitu ada folder 'Libraries' (hanya bisa dilihat di Netbeans kalian)
-
-2.)Kemudian klik kanan di 'Libraries' 
-=> Add JAR/Folder 
-=> cari : mysql-connector-j-9.5.0 -- itu ada di folder 'lib'
-=> itu adalah file .jar (agar bisa connect ke database

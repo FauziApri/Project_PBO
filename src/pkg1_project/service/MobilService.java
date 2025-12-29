@@ -30,6 +30,7 @@ public class MobilService {
                     rs.getString("merk"),
                     rs.getString("tipe"),
                     rs.getInt("tahun"),
+                    rs.getString("trim_name"),
                     rs.getInt("harga_sewa"),
                     rs.getString("warna"),
                     rs.getString("plat_no"),
